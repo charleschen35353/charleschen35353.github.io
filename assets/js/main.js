@@ -78,12 +78,12 @@
 
 		// Inactive by default on <= large.
 			breakpoints.on('<=large', function() {
-				$sidebar.removeClass('inactive');
+				$sidebar.addClass('inactive');
 			});
 
 			breakpoints.on('>large', function() {
 				
-				$sidebar.addClass('inactive');
+				$sidebar.removeClass('inactive');
 			});
 
 		// Hack: Workaround for Chrome/Android scrollbar position bug.
@@ -91,7 +91,7 @@
 			&&	browser.name == 'chrome')
 				$('<style>#sidebar .inner::-webkit-scrollbar { display: none; }</style>')
 					.appendTo($head);
-
+        /*
 		// Toggle.
 			$('<a href="#sidebar" class="toggle">Toggle</a>')
 				.appendTo($sidebar)
@@ -105,7 +105,7 @@
 						$sidebar.toggleClass('inactive');
 
 				});
-
+        */
 		// Events.
 
 			// Link clicks.
